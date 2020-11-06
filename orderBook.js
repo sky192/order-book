@@ -1,8 +1,10 @@
+// I thaught the last day of  submition this homework would be on november 8th sorry :(
 const reconcileOrder = (existingBook, incomingOrder) => {
   const oppositeOrders = existingBook.filter(order => order.type !== incomingOrder.type)
   let updatedBook = existingBook.filter(order => order.type === incomingOrder.type)
 
-  updatedBook = existingBook.length ? updatedBook.concat(fillOrAddOrder(oppositeOrders, incomingOrder))
+  updatedBook = existingBook.length
+    ? updatedBook.concat(fillOrAddOrder(oppositeOrders, incomingOrder))
     : updatedBook.concat(incomingOrder)
 
   return updatedBook
